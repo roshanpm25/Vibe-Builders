@@ -37,7 +37,7 @@ export default function Result({ result }) {
 
 const netlifyUrl = "https://vibe-builder.netlify.app";
 
-const rawMessage = "I just found out I'm living in *" + data.name + "* mode!\nWanna know your vibe? Check this out" + netlifyUrl;
+const rawMessage = "I just found out I'm living in *" + data.name + "* mode!\nWanna know your vibe? Check this out " + netlifyUrl;
 const encodedMessage = encodeURIComponent(rawMessage);
 
 const handleCopy = () => {
