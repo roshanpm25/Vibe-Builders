@@ -35,21 +35,22 @@ export default function Result({ result }) {
     return () => clearTimeout(timer);
   }, []);
 
-  const netlifyUrl = "https://vibe-builder.netlify.app"; 
-  const shareText = encodeURIComponent(
-    `😂 I just found out I'm living in *${data.name}* mode!\nWanna know your vibe? Check this out 👇\n${netlifyUrl}`
-  );
+const netlifyUrl = "https://vibe-builder.netlify.app";
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(netlifyUrl).then(() => {
-      alert("Link copied to clipboard!");
-    });
-  };
+const rawMessage = "I just found out I'm living in *" + data.name + "* mode!\nWanna know your vibe? Check this out" + netlifyUrl;
+const encodedMessage = encodeURIComponent(rawMessage);
 
-  const handleWhatsappShare = () => {
-    const whatsappUrl = `https://wa.me/?text=${shareText}`;
-    window.open(whatsappUrl, "_blank");
-  };
+const handleCopy = () => {
+  navigator.clipboard.writeText(rawMessage).then(() => {
+    alert("Message copied to clipboard!");
+  });
+};
+
+const handleWhatsappShare = () => {
+  const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+  window.open(whatsappUrl, "_blank");
+};
+
 
   return (
     <div className="result-container" style={{ textAlign: "center" }}>
