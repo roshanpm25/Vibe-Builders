@@ -1,24 +1,29 @@
+
 import React, { useState } from 'react';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 
 export default function App() {
-  const [quizFinished, setQuizFinished] = useState(false);
-  const [finalResult, setFinalResult] = useState(null);
-  const [score, setScore] = useState(null);
+  const [result, setResult] = useState(null);
 
-  const handleFinish = (result, scoreData) => {
-    setFinalResult(result);
-    setScore(scoreData);
-    setQuizFinished(true);
+  const handleFinish = (vibeResult) => {
+    setResult(vibeResult);
+  };
+
+  const handleRestart = () => {
+    setResult(null);
   };
 
   return (
-    <div className="App">
-      {!quizFinished ? (
+    <div className="app">
+      <h1>Vibe Check Quiz 2025</h1>
+      {!result ? (
         <Quiz onFinish={handleFinish} />
       ) : (
-        <Result result={finalResult} scores={score} />
+        <>
+          <Result result={result} />
+          <button onClick={handleRestart}>Try Again</button>
+        </>
       )}
     </div>
   );

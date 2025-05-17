@@ -5,10 +5,10 @@ import QuestionCard from './QuestionCard';
 export default function Quiz({ onFinish }) {
   const [currentQn, setCurrentQn] = useState(0);
   const [score, setScore] = useState({
-    gremlin: 0,
-    chaiCore: 0,
-    desiSlayer: 0,
-    calmKarma: 0,
+    memeLegend: 0,
+    chaosExplorer: 0,
+    fridgeGhost: 0,
+    chillVibes: 0,
   });
 
   const calculateResult = () => {

@@ -1,14 +1,26 @@
 import React from 'react';
 
 export default function QuestionCard({ questionData, onAnswer }) {
+  if (!questionData) return null;
+
+  const handleOptionClick = (vibe) => {
+    onAnswer(vibe);
+  };
+
   return (
     <div className="question-card">
-      <h3>{questionData.question}</h3>
-      {questionData.options.map((opt, idx) => (
-        <button key={idx} onClick={() => onAnswer(opt.vibe)}>
-          {opt.text}
-        </button>
-      ))}
+      <h2>{questionData.question}</h2>
+      <div className="options">
+        {questionData.options.map(({ answer, vibe }, idx) => (
+          <div
+            key={idx}
+            className="option"
+            onClick={() => handleOptionClick(vibe)}
+          >
+            {answer}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
