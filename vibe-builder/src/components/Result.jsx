@@ -31,13 +31,14 @@ export default function Result({ result }) {
   const [showShare, setShowShare] = useState(false);
 
   useEffect(() => {
-    // Simulate image loading delay
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
-  const netlifyUrl = "https://your-vibe-checker.netlify.app"; // Replace with your actual URL
-  const shareText = encodeURIComponent(`Try this vibe checker and discover your vibe! ${netlifyUrl}`);
+  const netlifyUrl = "https://vibe-builder.netlify.app"; // Replace with your actual Netlify URL
+  const shareText = encodeURIComponent(
+    `😂 I just found out I'm living in *${data.name}* mode!\nWanna know your vibe? Check this out 👇\n${netlifyUrl}`
+  );
 
   const handleCopy = () => {
     navigator.clipboard.writeText(netlifyUrl).then(() => {
