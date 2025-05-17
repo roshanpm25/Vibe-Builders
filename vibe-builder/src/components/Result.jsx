@@ -35,7 +35,7 @@ export default function Result({ result }) {
     return () => clearTimeout(timer);
   }, []);
 
-  const netlifyUrl = "https://vibe-builder.netlify.app"; // Replace with your actual Netlify URL
+  const netlifyUrl = "https://vibe-builder.netlify.app"; 
   const shareText = encodeURIComponent(
     `😂 I just found out I'm living in *${data.name}* mode!\nWanna know your vibe? Check this out 👇\n${netlifyUrl}`
   );

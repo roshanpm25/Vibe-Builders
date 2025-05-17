@@ -9,14 +9,6 @@ export default function QuestionCard({ questionData, onAnswer }) {
 
   return (
     <div className="question-card">
-      {/* Meme image, only show if meme URL exists */}
-      {questionData.meme && (
-        <img
-          src={questionData.meme}
-          alt="Question meme"
-          style={{ maxWidth: '100%', marginBottom: '12px', borderRadius: '8px' }}
-        />
-      )}
 
       <h2>{questionData.question}</h2>
       <div className="options">
