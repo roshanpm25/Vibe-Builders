@@ -2,16 +2,21 @@ const questions = [
   {
     id: 1,
     question: "You get a text from a group chat, but it’s already 50 messages deep. You:",
+
     options: [
       { answer: "Scroll through carefully to catch up", vibe: "chaosExplorer" },
       { answer: "Ignore it and reply later", vibe: "ghostMode" },
       { answer: "Wait for someone to summarize before replying", vibe: "chillVibes" },
-      { answer: "Mute the chat and reply when ready", vibe: "memeLegend" },
+      { answer: "Mute the chat and reply when ready", vibe: "memeLegend" }
     ],
   },
   {
     id: 2,
     question: "You forgot your charger at home and your phone is at 5%. You:",
+   meme: {
+    type: "image", // or "gif"
+    url: "https://www.bing.com/th/id/OGC.1d4fa5631f9ac76a097611e3f26a7e6c?pid=1.7&rurl=https%3a%2f%2fc.tenor.com%2fIeIUUyrIqoIAAAAM%2fphone-charger.gif&ehk=b68KM%2beRSz6lRK%2fXhqaq7erL%2fY%2bJ%2b6iOHbqk%2fjI%2fcG0%3d"
+  },
     options: [
       { answer: "Rush to buy a new charger", vibe: "chaosExplorer" },
       { answer: "Keep using your phone till it dies", vibe: "ghostMode" },
@@ -22,6 +27,7 @@ const questions = [
   {
     id: 3,
     question: "You’re walking and suddenly realize you forgot your headphones. You:",
+
     options: [
       { answer: "Go back home to get them", vibe: "chaosExplorer" },
       { answer: "Decide to live with silence", vibe: "ghostMode" },
@@ -59,26 +65,29 @@ const questions = [
       { answer: "Change the topic smoothly", vibe: "memeLegend" },
     ],
   },
-  {
+  
+ {
     id: 7,
-    question: "You check your bank account and see a mystery transaction. You:",
+    question: "You wear a new outfit and someone immediately roasts it. You:",
     options: [
-      { answer: "Call the bank immediately", vibe: "chaosExplorer" },
-      { answer: "Ignore it, might be a glitch", vibe: "ghostMode" },
-      { answer: "Review transactions carefully", vibe: "chillVibes" },
-      { answer: "Ask a friend for advice", vibe: "memeLegend" },
+      { answer: "You just don’t get fashion.", vibe: "chaosExplorer" },
+      { answer: "Stare at them like they owe you rent.", vibe: "ghostMode" },
+      { answer: "Say “It’s giving main character” and strut off.", vibe: "chillVibes" },
+      { answer: "Say: “Bold of you to speak in that outfit.”", vibe: "memeLegend" }, // NEW
     ],
   },
   {
     id: 8,
-    question: "Your favorite coffee shop is out of your go-to order. You:",
+    question: "You hear your voice in a video recording. You:",
     options: [
-      { answer: "Try a new drink boldly", vibe: "chaosExplorer" },
-      { answer: "Leave disappointed", vibe: "ghostMode" },
-      { answer: "Ask for a recommendation calmly", vibe: "chillVibes" },
-      { answer: "Order your second favorite drink", vibe: "memeLegend" },
+      { answer: "Nah, that’s AI. I don’t sound like that.", vibe: "chaosExplorer" },
+      { answer: "Throw your phone like it betrayed you.", vibe: "ghostMode" },
+      { answer: "Okay, maybe I’m a podcast person now.", vibe: "chillVibes" },
+      { answer: "Set it as your alarm tone and own it.", vibe: "memeLegend" }, // NEW
     ],
   },
+
+
   {
     id: 9,
     question: "You accidentally send a text meant for a friend to your boss. You:",
@@ -112,7 +121,7 @@ const questions = [
   {
     id: 12,
     question: "You realize you left your wallet at home. You:",
-    options: [
+     options: [
       { answer: "Run back to get it", vibe: "chaosExplorer" },
       { answer: "Try to borrow money quietly", vibe: "ghostMode" },
       { answer: "Call someone to help", vibe: "chillVibes" },
@@ -142,6 +151,7 @@ const questions = [
   {
     id: 15,
     question: "You accidentally like a 3-year-old post while stalking someone’s profile. You:",
+
     options: [
       { answer: "Delete the app immediately", vibe: "chaosExplorer" },
       { answer: "Pretend nothing happened", vibe: "ghostMode" },
